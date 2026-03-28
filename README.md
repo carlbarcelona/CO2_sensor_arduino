@@ -66,6 +66,7 @@ A real-time CO₂ monitoring system using an MQ135 gas sensor with Arduino. Disp
 * Improve CO₂ calibration accuracy
 * Add wireless monitoring (WiFi/Bluetooth)
 
-## Author
+## Authors
 
-Your Name
+Barcelona, Carl Sebastian E.
+Lacuadra, Florence ( https://github.com/plrnz )
