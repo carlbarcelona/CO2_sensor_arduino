@@ -1,4 +1,3 @@
-
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 #include <MQ135.h>
@@ -36,7 +35,7 @@ void setup() {
     digitalWrite(buzzer, LOW);
 
     // Countdown / Progress Bar for Preheat
-    lcd.print("Warming up...");
+    lcd.print("Initializing...");
     for (int i = 0; i <= 100; i += 1) {
         lcd.setCursor(12, 0);
         if (i < 100) lcd.print(" ");
@@ -90,18 +89,22 @@ void loop() {
     lcd.setCursor(0, 0);
     lcd.print("CO2: ");
     lcd.print(co2ppm);
-    lcd.print("ppm");
+    lcd.print(" ppm");
 
     // Show change in ppm with "PPM" label
     lcd.setCursor(0, 1);
     lcd.print(changeInCo2);  // Display the difference
-    lcd.print(" PPM");
+    lcd.print(" ppm");
 
-    // Set Good or Bad label based on CO2 level
-    if (co2ppm <= 1000) {
-        lcd.print(" ACCEPTABLE");
+    // Set CO2 level labels
+    if (co2ppm < 250) {
+        lcd.print(" QUALITY");
+    } else if (co2ppm <= 1000) {
+        lcd.print(" GOOD");
+    } else if (co2ppm <= 2000) {  // This now covers 1001-2000
+        lcd.print(" BAD");
     } else {
-        lcd.print(" WARNING");
+        lcd.print(" DANGER!");
     }
 
     // Set LEDs and Buzzer based on CO2 levels

@@ -7,7 +7,7 @@ A real-time CO₂ monitoring system using an MQ135 gas sensor with Arduino. Disp
 ## Features
 
 * Real-time CO₂ (PPM) monitoring
-* LCD display with status (ACCEPTABLE / WARNING)
+* LCD display with air quality classification
 * CO₂ trend tracking (increase/decrease in PPM)
 * LED indicators (green = safe, red = high CO₂)
 * Buzzer alert for unsafe levels
@@ -44,10 +44,16 @@ A real-time CO₂ monitoring system using an MQ135 gas sensor with Arduino. Disp
 * Wait for sensor warm-up (progress shown on LCD)
 * View CO₂ levels in PPM on LCD
 * Monitor trends via Serial Plotter
-* Observe alerts:
+* Air quality classification:
 
-  * ≤1000 PPM → ACCEPTABLE (Green LED)
-  * > 1000 PPM → WARNING (Red LED + Buzzer)
+  * < 250 PPM → QUALITY
+  * 250–1000 PPM → GOOD
+  * 1001–2000 PPM → BAD
+  * > 2000 PPM → DANGER!
+* Alerts:
+
+  * ≤1000 PPM → Green LED (Safe)
+  * > 1000 PPM → Red LED + Buzzer (Warning)
 
 ## Project Structure
 
@@ -62,4 +68,4 @@ A real-time CO₂ monitoring system using an MQ135 gas sensor with Arduino. Disp
 
 ## Author
 
-Carl Sebastian E. Barcelona
+Your Name
