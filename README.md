@@ -11,10 +11,9 @@ A real-time CO₂ monitoring system using an MQ135 gas sensor with Arduino. Disp
 * CO₂ trend tracking (increase/decrease in PPM)
 * LED indicators (green = safe, red = high CO₂)
 * Buzzer alert for unsafe levels
-* Serial Plotter logging (time, CO₂, change)
 * Sensor warm-up sequence with progress display
 
-## Tech Stack
+## Tech and Components used
 
 * Arduino (C/C++)
 * MQ135 Gas Sensor
@@ -59,14 +58,7 @@ A real-time CO₂ monitoring system using an MQ135 gas sensor with Arduino. Disp
 
 * main.ino → Core Arduino program for sensor reading, display, and alerts
 
-## Future Improvements
-
-* Add temperature & humidity compensation
-* Implement data logging to SD card
-* Improve CO₂ calibration accuracy
-* Add wireless monitoring (WiFi/Bluetooth)
-
 ## Authors
 
-Barcelona, Carl Sebastian E.
-Lacuadra, Florence ( https://github.com/plrnz )
+* Barcelona, Carl Sebastian
+* Lacuadra, Florence ( https://github.com/plrnz )
